@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2.css">
+    <script src="task3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Week 1</title>
+    <style>
+        p    {color: rgb(32, 32, 32); text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <h1>This is a h1 heading</h1>
+            <h2 style="color: purple;">This is a h2 heading</h2>
+        </div>
+        <p>This is a paragraph</p>
+        <img src="cute-dog.jpg" class="dog_image" alt="Dog" width="500px" height="300px"><br>
+        <a href="https://www.w3schools.com/">W3School!</a>
+        <!-- Table -->
+        <table class="table1">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <th>Test 1</th>
+              <th>001</th>
+            </tr>
+            <tr>
+              <th>Test 2</th>
+              <th>002</th>
+            </tr>
+            <tr>
+                <th>Test 3</th>
+                <th>003</th>
+              </tr>
+          </table>
+
+        <form>
+            <!-- String input -->
+            <div class="inputName">
+                <label for="firstName">First name:</label>
+                <input type="text" name="firstName" id="firstName"><br>
+                <label for="lastName">Last name:</label>
+                <input type="text" name="lastName" id="lastName"><br>
+            </div>
+            <!-- Radio button -->
+            <div class="radioFood">
+                <p>What is you favourite fast food:</p>
+                <label for="mcdonalds">McDonalds</label>
+                <input type="radio" id="mcdonalds" name="fav_fastFood" value="McDonalds"><br>
+                <label for="kfc">KFC</label>
+                <input type="radio" id="kfc" name="fav_fastFood" value="KFC"><br>
+                <label for="hungryJacks">Hungry Jacks</label>
+                <input type="radio" id="hungryJacks" name="fav_fastFood" value="Hungry Jacks"><br>
+            </div>
+        </form><br>
+        <!-- Date button -->
+        <button type="button" onclick="getDate()">Display the date</button>
+        <p id="date"></p>
+        <!-- Todo list -->
+        <div id="app">
+            <!-- Check the data -->
+            <div
+                v-for="todo in todos"
+                :key="todo.title"
+                :style="{ textDecoration: todo.checked? 'line-through':'none' }"
+            >
+                <input type="checkbox" v-mode="todo.checked" />
+                {{ todo.title }}
+            </div>
+            <br>
+        </div>
+        <!-- 4 Digit number generator -->
+        <button onclick="getID()">Get ID</button>
+        <h3>Number generator:</h3>
+        <p id="randomUserId"></p>
+        <!-- Footer -->
+        <div class="footer">
+            <h1>This is an example of a footer</h1>
+            <h2>Week 1 SIT120</h2>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/task5.js"></script>

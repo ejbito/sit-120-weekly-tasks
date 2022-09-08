@@ -1,0 +1,81 @@
+body{
+    background-color: #c79f55;
+}
+
+h1{
+    color: rgb(0, 156, 234);
+    text-align: left;
+    text-decoration: solid;
+}
+
+.header{
+    background-color: #ffa600;
+    height: 100px;
+    width: 1000px;
+}
+
+.footer{
+    background-color: #00ff40;
+    height: 100px;
+    width: 1000px;
+}
+
+.main{
+    background-color: #f5deb3;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputName{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+.radioFood{
+    color: red;
+}
+
+table, th, td.table1{
+    border: 2px solid;
+    color: black;
+}
+
+@media screen and (max-width: 1000px){
+    body{
+        background-color: #c79f55;
+    }
+
+    .header{
+        background-color: #ffa600;
+        height: 100px;
+        width: 800px;
+    }
+
+    .footer{
+        background-color: #ff004c;
+        height: 100px;
+        width: 800px;
+    }
+
+    .main{
+        background-color: #b5f5b3;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dog_image{
+        height: 250px;
+        width: 400px;
+    }
+
+    table, th, td.table1{
+        border: 1px solid;
+        color: black;
+    }
+
+
+}

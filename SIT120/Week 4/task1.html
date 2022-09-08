@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS -->
+    <script src="js/script.js"></script> <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> <!-- Vue -->
+    <title>Week 2</title>
+</head>
+<body>
+    <div id="helloWorld">
+        {{ message }}
+    </div>
+
+    <div id="count">
+        <button @Oclick="count++">Count is: {{ count }}</button>
+    </div>
+</body>
+</html>
+
+<!-- Vue.js --> 
+<script>
+    let app = new Vue({
+        el: '#helloWorld',
+        
+        data: {
+        message: 'Hello World!'
+        }
+    })
+
+    let count = new Vue({
+        el: '#count',
+        data: {
+            count: 0,
+        },
+    });
+    app.count = 0;
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS -->
+    <script src="js/script.js"></script> <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> <!-- Vue -->
+    <title>Week 2</title>
+</head>
+<body>
+    <div id="app">
+        <p v-for="assignment in assignments" :key="assignment.id">
+            {{ assignment.name}}
+        </p>
+    </div>
+</body>
+</html>
+
+<!-- Vue.js --> 
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            assignments: [
+                {
+                    name: 'assignment1',
+                    dueTomorrow: true,
+                    id: 1,
+                },
+                {
+                    name: 'assignment2',
+                    dueTomorrow: false,
+                    id: 2,
+                },
+                {
+                    name: 'assignment3',
+                    dueTomorrow: true,
+                    id: 3,
+                },
+            ],
+        },
+        computed: {
+            dueTomorrowAssignments() {
+                return this.assignments.filter((assignment) => assignment.dueTomorrow);
+            },
+        },
+    });
+    app.count = 2;
+</script>
